@@ -23,10 +23,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang='en'
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className={`min-h-full flex flex-col font-sans ${geistSans.variable} ${geistMono.variable}`}
+        className={`min-h-full flex flex-col font-sans bg-background text-foreground ${geistSans.variable} ${geistMono.variable}`}
       >
         <ClerkProvider appearance={{ theme: shadcn }}>{children}</ClerkProvider>
       </body>

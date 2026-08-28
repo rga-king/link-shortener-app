@@ -1,5 +1,6 @@
 import { SignInButton, SignUpButton, Show, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -7,14 +8,14 @@ export default function Home() {
       <header className='absolute top-0 right-0 p-4 flex gap-3'>
         <Show when='signed-out'>
           <SignInButton mode='modal'>
-            <button className='px-4 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-black dark:hover:bg-zinc-200'>
+            <Button className='bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-black dark:hover:bg-zinc-200'>
               Sign In
-            </button>
+            </Button>
           </SignInButton>
           <SignUpButton mode='modal'>
-            <button className='px-4 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-black dark:hover:bg-zinc-200'>
+            <Button className='bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-black dark:hover:bg-zinc-200'>
               Sign Up
-            </button>
+            </Button>
           </SignUpButton>
         </Show>
         <Show when='signed-in'>
